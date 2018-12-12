@@ -1,0 +1,21 @@
+.navbar {
+    position: relative;
+    float: right;
+}
+.basket {
+    position: relative;
+    float: right;
+}
+.center {
+    position: relative;
+    text-align: center;
+}
+.item-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.product-item {
+    flex: 1 1 auto;
+}
+
