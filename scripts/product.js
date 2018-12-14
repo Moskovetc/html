@@ -1,0 +1,3 @@
+function productInfo() {
+    alert("worked");
+}

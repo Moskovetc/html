@@ -32,24 +32,22 @@ body{
 .search-bar-block {
     width: 250px;
 }
-.basket-block {
-    width: 100px;
-    position: relative;
-    background-image: url("resources/imgs/basket.png");
-    background-repeat: no-repeat;
-    background-size: 20px;
-    background-position: right;
+.basket-img {
+    width: 20px;
 }
 .count {
-    float: right;
     bottom: 0;
-    color: chartreuse;
 }
 .username-block {
     width: 150px;
 }
 .login-button-block {
     width: 100px;
+}
+.category-title-block {
+    position: sticky;
+    top: 24px;
+    background-color: white;
 }
 .category-title {
     text-align: center;
@@ -70,6 +68,10 @@ body{
 }
 .product-container > span{
     text-align: center;
+}
+.product-container > img{
+    width: 150px;
+    height: auto;
 }
 .footer-container {
     display: flex;
