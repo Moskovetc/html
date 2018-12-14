@@ -1,37 +1,105 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="style.css" rel="stylesheet">
-    </head>
-    <body style>
-        <nav>
-            <div>
-                <span><a href="#">Иванов Иван</a></span>
-                <span><a href="#">Выход</a></span>
-                <span class="basket"><a href="#">Корзина</a></span>
-                <form class="navbar">
-                    <input placeholder="Поиск...">
-                    <input type="submit" value="поиск">
-                </form>
-            </div>
-        </nav>
-        <div class="category">
-            <h1 class="category-head center">Категория товаров</h1>
-            <div class="item-container">
-                <div class="product-item">
-                    <img src="resources/imgs/dummyimg.png">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин руко-поп</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body style>
+    <div class="fixed-position">
+        <div class="navigation-row-container">
+            <div class="nav-left">
+                <div class="username-block">
+                    User Name
                 </div>
-                <div class="product-item">
-                    Phone
-                </div>
-                <div class="product-item">
-                    <img src="resources/imgs/dummyimg.png">
-                </div>
-                <div class="product-item">
-                    Phone
+                <div class="login-button-block">
+                    Login/Logout
                 </div>
             </div>
-    </body>
+            <div class="nav-right">
+                <div class="search-bar-block">
+                    <form>
+                        <input placeholder="Search...">
+                        <input type="submit" value="Search">
+                    </form>
+                </div>
+                <div class="basket-block">                 
+                    <span class="count">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="category">
+        <h2 class="category-title">Smartphones</h2>
+        <hr class="category-hr">
+        <div class="products-container">
+            <div class="product-container">
+                <img src="resources/imgs/dummyimg.png">
+                <span>Phone</span>
+            </div>
+            <div class="product-container">
+                <img src="resources/imgs/dummyimg.png">
+                <span>Phone</span>
+            </div>
+            <div class="product-container">
+                <img src="resources/imgs/dummyimg.png">
+                <span>Phone</span>
+            </div>
+            <div class="product-container">
+                <img src="resources/imgs/dummyimg.png">
+                <span>Phone</span>
+            </div>
+            <div class="product-container">
+                <img src="resources/imgs/dummyimg.png">
+                <span>Phone</span>
+            </div>
+            <div class="product-container">
+                <img src="resources/imgs/dummyimg.png">
+                <span>Phone</span>
+            </div>
+            <div class="product-container">
+                <img src="resources/imgs/dummyimg.png">
+                <span>Phone</span>
+            </div>
+        </div>
+    </div>
+    <div class="category">
+        <h2 class="category-title">Headphones</h2>
+        <hr class="category-hr">
+        <div class="products-container">
+            <div class="product-container">
+                <img src="resources/imgs/beer.jpg">
+                <span>Lager</span>
+            </div>
+            <div class="product-container">
+                <img src="resources/imgs/beer.jpg">
+                <span>Lager</span>
+            </div>
+            <div class="product-container">
+                <img src="resources/imgs/beer.jpg">
+                <span>Lager</span>
+            </div>
+            <div class="product-container">
+                <img src="resources/imgs/beer.jpg">
+                <span>Lager</span>
+            </div>
+            <div class="product-container">
+                <img src="resources/imgs/beer.jpg">
+                <span>Lager</span>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <hr class="footer-hr">
+            <span class="footer-text">Текстовая информация для футера</span>
+            <span class="produced-by">Student production</span>
+        </div>
+    </footer>
+</body>
+
 </html>
