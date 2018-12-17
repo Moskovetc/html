@@ -66,6 +66,33 @@ body{
     flex-wrap: wrap;
     justify-content: flex-start;
 }
+.product-container-onclick {
+    display: none;
+    flex-direction: row;
+    border-style: solid;
+    border-color: black;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+}
+.basket-button {
+    border-style: solid;
+    border-color: black;
+}
+.product-container-onclick > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 20%;
+    height: 20%;
+    margin: auto;
+}
+.product-container-onclick > img {
+    width: 150px;
+    height: auto;
+    margin: auto;
+}
 .product-container > span{
     text-align: center;
 }
