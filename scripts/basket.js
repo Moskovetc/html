@@ -1,1 +1,1 @@
-showModal('basket-modal', 'basket-button');
+// showModal('basket-modal', 'basket-button');

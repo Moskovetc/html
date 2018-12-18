@@ -16,7 +16,7 @@ body{
 .nav-right {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .nav-left > div {
     text-align: left;
@@ -24,13 +24,19 @@ body{
 .nav-left {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .search-bar-block {
     width: 250px;
 }
 .search-bar-button {
     width: 75px;
+    border: 1px solid blue;
+    text-align: center;
+}
+.basket-block {
+    border-radius: 10px;
+    width: 20px;
     border: 1px solid blue;
     text-align: center;
 }

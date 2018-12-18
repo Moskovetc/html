@@ -20,13 +20,13 @@
                 </div>
             </div>
             <div class="nav-right">
-                <div class="search-bar-block">
-                    <div class="search-bar-button" id="search-button">
+                <div class="search-bar-block" id="search-button" onclick="showModal('search-modal')">
+                    <div class="search-bar-button">
                         Search...
                     </div>
                 </div>
-                <div class="basket-block" id="basket-button">
-                    <div>
+                <div class="basket-block" onclick="showModal('basket-modal')">
+                    <div id="basket-button">
                         0
                     </div>
                 </div>
@@ -55,7 +55,6 @@
             <p>Корзина</p>
         </div>
     </div>
-
     <div id="search-modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
