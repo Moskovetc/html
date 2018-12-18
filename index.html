@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="nav-right">
-                <div class="search-bar-block" id="search-button" onclick="showModal('search-modal')">
+                <div class="search-bar-block" id="search-button" onclick="showModal('search-modal');showProducts();">
                     <div class="search-bar-button">
                         Search...
                     </div>
@@ -52,13 +52,22 @@
     <div id="basket-modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <p>Корзина</p>
+            <h2 class="popup-title">Корзина</h2>
+            <hr class="popup-hr">
         </div>
     </div>
     <div id="search-modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <p>Поиск</p>
+            <h2 class="popup-title">Поиск</h2>
+            <div id="search-placeholder">
+                <input type=search placeholder="Введите текст для поиска" onkeyup="filterProducts()">
+                <input type="submit" value="Искать">
+                <hr class="popup-hr">
+            </div>
+            <div class="products-list">
+
+            </div>
         </div>
     </div>
     <footer>
