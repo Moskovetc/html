@@ -1,7 +1,7 @@
 function appendProducts() {
     for (var i = 0; i < 30; i++) {
-        document.getElementById("smtphns").appendChild(createProductDiscription("Phone", "resources/imgs/smartphone.png", i));
-        document.getElementById("smtphns").appendChild(createSmartPhone("Phone", "resources/imgs/smartphone.png", i));
+        document.getElementById("smtphns").appendChild(createProductDiscription("SmartPhone", "resources/imgs/smartphone.png", i));
+        document.getElementById("smtphns").appendChild(createSmartPhone("SmartPhone", "resources/imgs/smartphone.png", i));
     }
     for (var i = 0; i < 25; i++) {
         document.getElementById("hdphns").appendChild(createProductDiscription("Headphone", "resources/imgs/headphone.png", i));
