@@ -1,0 +1,1 @@
+showModal('search-modal', 'search-button');

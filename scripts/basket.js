@@ -1,0 +1,1 @@
+showModal('basket-modal', 'basket-button');
