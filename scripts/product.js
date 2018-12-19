@@ -35,6 +35,9 @@ function createProductDiscription(name, imgSrc, number) {
     var basketButton = document.createElement("div");
     basketButton.classList = "basket-button";
     basketButton.appendChild(document.createTextNode("В корзину!"));
+    basketButton.onclick = function () {
+        buy(discription.id);
+    };
     discription.appendChild(discriptiontImage);
     discription.appendChild(discriptionProductName);
     discription.appendChild(productPrice);
@@ -69,7 +72,7 @@ function productInfo(block_4_close, block_4_open) {
     document.getElementById(block_4_open).style.display = 'flex';
     $("html,body").animate({
         scrollTop: $('#' + block_4_open).offset().top - $('#' + block_4_open).height()
-    }, 1000);
+    }, 100);
 }
 
 function hideDiscription() {
