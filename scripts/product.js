@@ -1,11 +1,23 @@
+var productsList = [];
+var productsDiscriptionList = [];
+
 function appendProducts() {
+    var smartphone, discriptionSmartphone, headphone, discriptionHeadphone;
     for (var i = 0; i < 30; i++) {
-        document.getElementById("smtphns").appendChild(createProductDiscription("SmartPhone", "resources/imgs/smartphone.png", i));
-        document.getElementById("smtphns").appendChild(createSmartPhone("SmartPhone", "resources/imgs/smartphone.png", i));
+        smartphone = createSmartPhone("SmartPhone", "resources/imgs/smartphone.png", i);
+        discriptionSmartphone = createProductDiscription("SmartPhone", "resources/imgs/smartphone.png", i);
+        document.getElementById("smtphns").appendChild(discriptionSmartphone);
+        document.getElementById("smtphns").appendChild(smartphone);
+        productsList.push(smartphone);
+        productsDiscriptionList.push(discriptionSmartphone)
     }
     for (var i = 0; i < 25; i++) {
-        document.getElementById("hdphns").appendChild(createProductDiscription("Headphone", "resources/imgs/headphone.png", i));
-        document.getElementById("hdphns").appendChild(createSmartPhone("Headphone", "resources/imgs/headphone.png", i));
+        headphone = createSmartPhone("Headphone", "resources/imgs/headphone.png", i);
+        discriptionHeadphone = createProductDiscription("Headphone", "resources/imgs/headphone.png", i);
+        document.getElementById("hdphns").appendChild(discriptionHeadphone);
+        document.getElementById("hdphns").appendChild(headphone);
+        productsList.push(headphone);
+        productsDiscriptionList.push(discriptionHeadphone);
     }
 }
 function createProductDiscription(name, imgSrc, number) {

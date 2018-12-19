@@ -1,16 +1,15 @@
 function showProducts() {
-    var elems = document.getElementsByClassName('product-container');
-    for (var i = 0; i < elems.length; i++) {
-        document.getElementsByClassName('products-list')[0].appendChild(elems[i]);
+    for (var i = 0; i < productsList.length; i++) {
+        document.getElementsByClassName('products-list')[0].appendChild(productsList[i].cloneNode(true));
     }
 }
 
 function filterProducts() {
   var input = document.getElementById('myInput');
   var filter = input.value.toUpperCase();
-  var elems = document.getElementsByClassName('product-container');
+  var productList = document.getElementsByClassName('products-list')[0];
+  var elems = productList.getElementsByClassName('product-container');
   var name, txtValue;
-  // Loop through all list items, and hide those who don't match the search query
   for (i = 0; i < elems.length; i++) {
     name = elems[i].getElementsByTagName("span")[0];
     txtValue = name.innerText;
