@@ -38,6 +38,9 @@ function createProductDiscription(name, imgSrc, number) {
         buy(discription.id);
     };
     basketButton.appendChild(document.createTextNode("В корзину!"));
+    basketButton.onclick = function () {
+        buy(discription.id);
+    };
     discription.appendChild(discriptiontImage);
     discription.appendChild(discriptionProductName);
     discription.appendChild(productPrice);
