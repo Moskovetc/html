@@ -1,7 +1,8 @@
 function showProducts() {
-    for (var i = 0; i < productsList.length; i++) {
-        document.getElementsByClassName('products-list')[0].appendChild(productsList[i].cloneNode(true));
-    }
+  clearNode('products-list');
+  for (var i = 0; i < productsList.length; i++) {
+    document.getElementsByClassName('products-list')[0].appendChild(productsList[i].cloneNode(true));
+  }
 }
 
 function filterProducts() {
@@ -18,5 +19,12 @@ function filterProducts() {
     } else {
       elems[i].style.display = "none";
     }
+  }
+}
+
+function clearNode(className) {
+  var node = document.getElementsByClassName(className)[0];
+  while (node.firstChild) {
+    node.removeChild(node.firstChild);
   }
 }
