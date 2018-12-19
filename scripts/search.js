@@ -1,6 +1,6 @@
 function showProducts() {
-  clearNode('products-list');
   var content = document.getElementById('search-modal');
+  clearNode(content, 'products-list');
   for (var i = 0; i < productsList.length; i++) {
     content.getElementsByClassName('products-list')[0].appendChild(productsList[i].cloneNode(true));
   }
@@ -23,8 +23,8 @@ function filterProducts() {
   }
 }
 
-function clearNode(className) {
-  var node = document.getElementsByClassName(className)[0];
+function clearNode(element, className) {
+  var node = element.getElementsByClassName(className)[0];
   while (node.firstChild) {
     node.removeChild(node.firstChild);
   }
