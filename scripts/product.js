@@ -41,9 +41,20 @@ function createProduct(name, imgSrc, id) {
     product.appendChild(createElementImage(imgSrc));
     product.appendChild(createElementName(name));
     product.appendChild(createElementRandomPrice(1500, 10000));
-    product.appendChild(createElementBasketButton());
+    product.appendChild(createElementBasketButton(product.id));
     product.appendChild(createElementCloseButton());
+    product.onclick = function () {
+        toggleDescription(this);
+    };
     return product;
+}
+function toggleDescription(elem) {
+    if (elem.style.width === '100%') {
+        hideDiscription();
+    } else {
+        hideDiscription();
+        showDiscription(elem.id);
+    }
 }
 function createElementImage(imgSrc) {
     var productImage = document.createElement('div');
@@ -73,12 +84,12 @@ function createElementRandomPrice(min, max) {
     productPrice.classList = 'price';
     return productPrice;
 }
-function createElementBasketButton() {
+function createElementBasketButton(id) {
     var basketButton = document.createElement('div');
     basketButton.classList = 'basket-button';
     basketButton.appendChild(document.createTextNode('В корзину!'));
     basketButton.onclick = function () {
-        buy(discription.id);
+        buy(id);
     };
     return basketButton;
 }
@@ -91,6 +102,27 @@ function createElementCloseButton() {
     x.classList = 'close';
     closeButton.appendChild(x);
     return closeButton;
+}
+function showDiscription(id) {
+    var product = document.getElementById(id);
+    product.style.flexDirection = 'row';
+    product.style.width = '100%';
+    product.getElementsByClassName('price')[0].style.display = 'flex';
+    product.getElementsByClassName('basket-button')[0].style.display = 'flex';
+    $("html,body").animate({
+        scrollTop: $('#' + id).offset().top - $('#' + id).height()
+    }, 100);
+
+}
+function hideDiscription() {
+    var elems = document.getElementsByClassName('product-container-onclick');
+    for (var i = 0; i < elems.length; i++) {
+        elems[i].style.flexDirection = 'column';
+        elems[i].style.width = '135px';
+        elems[i].getElementsByClassName('price')[0].style.display = 'none';
+        elems[i].getElementsByClassName('basket-button')[0].style.display = 'none';
+        elems[i].getElementsByClassName('close-button')[0].style.display = 'none';
+    }
 }
 
 // function createProductDiscription(name, imgSrc, number) {
