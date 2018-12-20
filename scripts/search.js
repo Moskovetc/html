@@ -26,6 +26,7 @@ function filterProducts() {
     txtValue = name.textContent;
     if (txtValue.toUpperCase().indexOf(filter) > -1) {
       elems[i].style.display = 'flex';
+      elems[i].style.height = '50%'
     } else {
       elems[i].style.display = 'none';
     }

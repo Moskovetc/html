@@ -47,7 +47,10 @@ function createElementImage(imgSrc) {
 
 function createElementName(name) {
     var productName = document.createElement("div");
-    productName.appendChild(document.createTextNode(name));
+    var min = 300;
+    var max = 900;
+    var randomModelName = 'Sumsungio' + (Math.floor(Math.random() * (max - min)) + min);
+    productName.appendChild(document.createTextNode(name + '    ' + randomModelName));
     productName.classList = 'product-name';
     return productName;
 }
@@ -60,7 +63,8 @@ function createElementPrice(price) {
 }
 function createElementRandomPrice(min, max) {
     var productPrice = document.createElement("div");
-    productPrice.appendChild(document.createTextNode(Math.floor(Math.random() * (max - min)) + min));
+    var randomPrice = Math.floor(Math.random() * (max - min)) + min;
+    productPrice.appendChild(document.createTextNode(String(randomPrice) + ' руб.'));
     productPrice.classList = 'price';
     return productPrice;
 }
