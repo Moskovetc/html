@@ -15,15 +15,15 @@
             <hr class="signup-hr">
         </div>
         <div class="signup-container">
-            <input type=search class="placeholder" placeholder="Имя">
-            <input type=search class="placeholder" placeholder="Фамилия">
-            <input type=search class="placeholder" placeholder="Логин">
-            <input type=search class="placeholder" placeholder="Пароль">
-            <input type=search class="placeholder" placeholder="Повторите пароль">
+            <input type=search class="placeholder" id="name" placeholder="Имя" onkeyup="tape('name')">
+            <input type=search class="placeholder" id="lastname" placeholder="Фамилия" onkeyup="tape('lastname')">
+            <input type=search class="placeholder" id="login" placeholder="Логин" onkeyup="tape('login')">
+            <input type=search class="placeholder" id="pass" placeholder="Пароль" onkeyup="tape('pass')">
+            <input type=search class="placeholder" id="retrypass" placeholder="Повторите пароль" onkeyup="tape('retrypass')">
             <div class="alert-info">
-                Сообщение об ошибке
+                
             </div>
-            <div class="signup-button">
+            <div class="signup-button" onclick="validation();">
                 <div class="highlight">
                     Зарегистрироваться
                 </div>
@@ -33,6 +33,7 @@
             </div>
         </div>
     </div>
+    <script src="scripts/signup.js"></script>
 </body>
 
 </html>
