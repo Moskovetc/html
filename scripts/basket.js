@@ -24,7 +24,16 @@ function showDescriptionInBasket() {
         elem.getElementsByClassName('price')[0].style.display = 'flex';
         elem.getElementsByClassName('close-button')[0].style.display = 'flex';
     }
+    var sum = calculateSum(listOfElems);
+    // var discount = calculateDiscount();
+    // var totalSum = calculateTotalSum();
 }
+// function calculateSum(elems) {
+//     var sum
+//     for (var i = 0; i < elems.length; i++) {
+//         elems[i].getElementsByClassName('price')[0].innerHTML;
+//     }
+// }
 
 function removeFromBasket(id) {
     var element = document.getElementById(id);
