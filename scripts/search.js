@@ -1,12 +1,17 @@
 function showProducts() {
   var content = document.getElementById('search-modal');
   clearNode(content, 'products-list');
-  for (var i = 0; i < productsList.length; i++) {
-    var clonedElem =productsList[i].cloneNode(true);
-    if (clonedElem.style.width === '100%') {
-      hideDescription(clonedElem);
+  var categories = document.getElementsByClassName('category');
+  var list;
+  for (var i = 0; i < categories.length; i++){
+    list = categories[i].getElementsByClassName('product-container-onclick');
+    for (var j = 0; j < list.length; j++) {
+      var clonedElem =list[j].cloneNode(true);
+      if (clonedElem.style.width === '100%') {
+        hideDescription(clonedElem);
+      }
+      content.getElementsByClassName('products-list')[0].appendChild(clonedElem);
     }
-    content.getElementsByClassName('products-list')[0].appendChild(clonedElem);
   }
 }
 

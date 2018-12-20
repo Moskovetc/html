@@ -7,7 +7,7 @@ function appendProducts() {
         document.getElementById("smtphns").appendChild(smartphone);
         productsList.push(smartphone);
     }
-    for (var i = 0; i < 20; i++) {
+    for (var i = 0; i < 25; i++) {
         headphone = createProduct('HeadPhone', 'resources/imgs/headphone.png', 'head' + i);
         document.getElementById("hdphns").appendChild(headphone);
         productsList.push(headphone);
@@ -92,7 +92,6 @@ function showDescription(id) {
     $("html,body").animate({
         scrollTop: $('#' + id).offset().top - $('#' + id).height()
     }, 100);
-
 }
 function hideDescription(elem) {
     elem.style.flexDirection = 'column';
@@ -101,7 +100,7 @@ function hideDescription(elem) {
     elem.getElementsByClassName('basket-button')[0].style.display = 'none';
     elem.getElementsByClassName('close-button')[0].style.display = 'none';
 }
-function hideAllDescriptions(){
+function hideAllDescriptions() {
     var elems = document.getElementsByClassName('product-container-onclick');
     for (var i = 0; i < elems.length; i++) {
         hideDescription(elems[i]);
