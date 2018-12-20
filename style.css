@@ -51,34 +51,53 @@ body{
     overflow: scroll;
     height: 80%;
 }
+.basket-content-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 100%;
+}
 .products-list-basket {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
     overflow: scroll;
-    height: 60%;
+    height: 50%;
 }
 .sum-container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
-    height: 30%;
+    height: 40%;
 }
 .sum,
-.skidka,
-.final {
+.skidka {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     height: 20%;
     justify-content: flex-start;
 }
-.sum > div{
+.final {
     display: flex;
     flex-direction: row;
-    width: 30%;
+    flex-wrap: wrap;
+    height: 20%;
+    justify-content: space-between;
+}
+.text-sum {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    font-size: 35px;
+}
+.count-sum {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
     font-size: 35px;
 }
 .skidka > div{
