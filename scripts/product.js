@@ -22,7 +22,7 @@ function createProduct(name, imgSrc, id) {
     product.appendChild(createElementName(name));
     product.appendChild(createElementRandomPrice(1500, 10000));
     product.appendChild(createElementBasketButton(product.id));
-    product.appendChild(createElementCloseButton());
+    product.appendChild(createElementCloseButton(product.id));
     product.onclick = function () {
         toggleDescription(this);
     };
@@ -73,7 +73,7 @@ function createElementBasketButton(id) {
     };
     return basketButton;
 }
-function createElementCloseButton() {
+function createElementCloseButton(id) {
     var closeButton = document.createElement('div');
     closeButton.classList = 'close-button';
     var x = document.createElement('span');
@@ -81,6 +81,9 @@ function createElementCloseButton() {
     x.appendChild(txt);
     x.classList = 'close';
     closeButton.appendChild(x);
+    closeButton.onclick = function () {
+        removeFromBasket(id);
+    };
     return closeButton;
 }
 function showDescription(id) {
@@ -94,6 +97,7 @@ function showDescription(id) {
     }, 100);
 }
 function hideDescription(elem) {
+    elem.removeAttribute("style")
     elem.style.flexDirection = 'column';
     elem.style.width = '135px';
     elem.getElementsByClassName('price')[0].style.display = 'none';

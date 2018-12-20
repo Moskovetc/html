@@ -1,6 +1,6 @@
 function showProducts() {
   var content = document.getElementById('search-modal');
-  clearNode(content, 'products-list');
+  clearNode(content, 'products-list-search');
   var categories = document.getElementsByClassName('category');
   var list;
   for (var i = 0; i < categories.length; i++){
@@ -10,7 +10,7 @@ function showProducts() {
       if (clonedElem.style.width === '100%') {
         hideDescription(clonedElem);
       }
-      content.getElementsByClassName('products-list')[0].appendChild(clonedElem);
+      content.getElementsByClassName('products-list-search')[0].appendChild(clonedElem);
     }
   }
 }
@@ -18,7 +18,7 @@ function showProducts() {
 function filterProducts() {
   var input = document.getElementById('myInput');
   var filter = input.value.toUpperCase();
-  var productList = document.getElementById('search-modal').getElementsByClassName('products-list')[0];
+  var productList = document.getElementById('search-modal').getElementsByClassName('products-list-search')[0];
   var elems = productList.getElementsByClassName('product-container-onclick');
   var name, txtValue;
   for (i = 0; i < elems.length; i++) {

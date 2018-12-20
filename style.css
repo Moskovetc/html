@@ -44,8 +44,16 @@ body{
 #search-placeholder input:first-child {
     width: 70%;
 }
-.products-list {
+.products-list-search {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: scroll;
+    height: 80%;
+}
+.products-list-basket {
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
     overflow: scroll;
