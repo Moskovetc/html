@@ -8,7 +8,7 @@
     <link href="style.css" rel="stylesheet">
 </head>
 
-<body style onload="appendProducts()">
+<body style onload="appendProducts(); setDiscount();">
     <div class="fixed-position">
         <div class="navigation-row-container">
             <div class="nav-left">
@@ -57,6 +57,38 @@
             <div class="products-list-basket">
 
             </div>
+            <div class="sum-container">
+                <div class="sum">
+                    <div class="text-sum">
+                        Сумма товаров
+                    </div>
+                    <div class="count-sum">
+                        12312
+                    </div>
+                </div>
+                <div class="skidka">
+                    <div class="text-skidka">
+                        Скидка
+                    </div>
+                    <div class="count-skidka">
+                        10%
+                    </div>
+                    <div class="sum-skidka">
+                        12312
+                    </div>
+                </div>
+                <div class="final">
+                    <div class="text-final">
+                        Итого
+                    </div>
+                    <div class="count-final">
+                        12312
+                    </div>
+                    <div class="submit-button">
+                        Оформить
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div id="search-modal" class="modal">
@@ -84,6 +116,7 @@
     <script src="scripts/modalWindow.js"></script>
     <script src="scripts/basket.js"></script>
     <script src="scripts/search.js"></script>
+    <script src="scripts/discount.js"></script>
 </body>
 
 </html>

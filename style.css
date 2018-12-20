@@ -57,7 +57,50 @@ body{
     flex-wrap: wrap;
     justify-content: flex-start;
     overflow: scroll;
-    height: 80%;
+    height: 60%;
+}
+.sum-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 30%;
+}
+.sum,
+.skidka,
+.final {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 20%;
+    justify-content: flex-start;
+}
+.sum > div{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    font-size: 35px;
+}
+.skidka > div{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    font-size: 35px;
+}
+.final > div{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    font-size: 35px;
+}
+.submit-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    /* margin: auto; */
+    border-style: solid;
+    border-color: black;
 }
 .popup-title {
     text-align: center;
