@@ -111,28 +111,28 @@ body {
     display: flex;
     flex-direction: row;
     width: 60%;
-    font-size: 35px;
+    font-size: 20px;
 }
 
 .count-sum {
     display: flex;
     flex-direction: row;
     width: 40%;
-    font-size: 35px;
+    font-size: 20px;
 }
 
 .skidka>div {
     display: flex;
     flex-direction: row;
     width: 30%;
-    font-size: 35px;
+    font-size: 20px;
 }
 
 .final>div {
     display: flex;
     flex-direction: row;
     width: 30%;
-    font-size: 35px;
+    font-size: 20px;
 }
 
 .submit-button {
@@ -203,6 +203,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    background-color: aliceblue;
 }
 
 .product-container {
@@ -216,9 +217,10 @@ body {
     display: flex;
     flex-direction: column;
     /* flex-direction: row; */
-    border-style: solid;
-    border-color: black;
+    /* border-style: solid;
+    border-color: black; */
     flex-wrap: wrap;
+    padding: 3px;
     width: 135px;
     /* width: 100%; */
     justify-content: space-around;

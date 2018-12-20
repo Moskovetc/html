@@ -99,6 +99,8 @@ function showDescription(id) {
     var product = document.getElementById(id);
     product.style.flexDirection = 'row';
     product.style.width = '100%';
+    product.style.borderStyle = 'solid';
+    product.style.borderColor = 'black';
     product.getElementsByClassName('price')[0].style.display = 'flex';
     product.getElementsByClassName('basket-button')[0].style.display = 'flex';
     $("html,body").animate({
