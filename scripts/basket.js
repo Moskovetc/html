@@ -1,3 +1,4 @@
+var myfunction;
 function buy(id) {
     var element = document.getElementById(id);
     var basketModal = document.getElementById('basket-modal');
@@ -11,6 +12,7 @@ function showDescriptionInBasket() {
     var elem;
     for (var i = 0; i < listOfElems.length; i++) {
         elem = listOfElems[i];
+        myfunction = elem.onclick;
         elem.onclick = function() {
             return false;
         }
@@ -24,9 +26,7 @@ function showDescriptionInBasket() {
 
 function removeFromBasket(id) {
     var element = document.getElementById(id);
-    element.onclick = function () {
-        toggleDescription(this);
-    };
+    element.onclick = myfunction;
     hideDescription(element);
     if (id.includes('smart')) {
         document.getElementById("smtphns").appendChild(element);

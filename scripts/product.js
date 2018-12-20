@@ -97,7 +97,7 @@ function showDescription(id) {
     }, 100);
 }
 function hideDescription(elem) {
-    elem.removeAttribute("style")
+    elem.removeAttribute("style");
     elem.style.flexDirection = 'column';
     elem.style.width = '135px';
     elem.getElementsByClassName('price')[0].style.display = 'none';
@@ -105,8 +105,12 @@ function hideDescription(elem) {
     elem.getElementsByClassName('close-button')[0].style.display = 'none';
 }
 function hideAllDescriptions() {
-    var elems = document.getElementsByClassName('product-container-onclick');
-    for (var i = 0; i < elems.length; i++) {
-        hideDescription(elems[i]);
+    var categories = document.getElementsByClassName('category');
+    var list;
+    for (var i = 0; i < categories.length; i++) {
+        list = categories[i].getElementsByClassName('product-container-onclick');
+        for (var j = 0; j < list.length; j++) {
+            hideDescription(list[j]);
+        }
     }
 }
