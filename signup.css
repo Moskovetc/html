@@ -1,6 +1,12 @@
-body{
+body {
     margin: 0%;
 }
+
+a.ex1:hover,
+a.ex1:active {
+    color: red;
+}
+
 .signup-content {
     display: flex;
     flex-direction: column;
@@ -9,6 +15,7 @@ body{
     width: 100%;
     height: 100%;
 }
+
 .signup-title-block {
     background-color: white;
     min-width: 350px;
@@ -21,6 +28,7 @@ body{
 .signup-hr {
     width: 80%;
 }
+
 .signup-container {
     display: flex;
     flex-direction: row;
@@ -31,6 +39,7 @@ body{
     height: 500px;
     margin: auto;
 }
+
 .placeholder,
 .alert-info,
 .info {
@@ -41,12 +50,14 @@ body{
     height: 50px;
     justify-content: center;
 }
+
 .placeholder {
     font-size: 20px;
     border-radius: 10px;
     border: 1px solid black;
     background-color: white;
 }
+
 .signup-button {
     display: flex;
     flex-direction: column;
@@ -61,6 +72,7 @@ body{
     margin: auto;
     z-index: 2;
 }
+
 .highlight :hover {
     background-color: yellowgreen;
     z-index: 1;
