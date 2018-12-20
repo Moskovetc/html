@@ -1,4 +1,5 @@
 var productsList = [];
+var wasClosed = false;
 
 function appendProducts() {
     var headphone, smartphone;
@@ -24,7 +25,10 @@ function createProduct(name, imgSrc, id) {
     product.appendChild(createElementBasketButton(product.id));
     product.appendChild(createElementCloseButton(product.id));
     product.onclick = function () {
-        toggleDescription(this);
+        if (!wasClosed){
+            toggleDescription(this);
+        }
+        wasClosed = false;
     };
     return product;
 }
@@ -87,6 +91,7 @@ function createElementCloseButton(id) {
     closeButton.appendChild(x);
     closeButton.onclick = function () {
         removeFromBasket(id);
+        wasClosed = true;
     };
     return closeButton;
 }
